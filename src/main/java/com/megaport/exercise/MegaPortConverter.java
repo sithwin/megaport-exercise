@@ -24,6 +24,7 @@ public class MegaPortConverter {
     if (sortedList.isEmpty())
       return false;
 
-    return fileOperation.writeFile(DEFAULT_FILE_LOCATION + inputFile, sortedList);
+    String outputFileName = DEFAULT_FILE_LOCATION + fileOperation.generateSortedFileName(inputFile);
+    return fileOperation.writeFile(outputFileName, sortedList);
   }
 }
